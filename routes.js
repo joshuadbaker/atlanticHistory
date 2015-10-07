@@ -1,13 +1,57 @@
 // app/routes.js
 var express = require('express');
 var router = express.Router();
-// grab the nerd model we just created
+// grab the blogblog. model we just created
 var Blog = require('./models/blog');
 
 // server routes --------------------------------
+
+// middleware to use for all requests
+router.use(function(req, res, next) {
+  console.log('it is working!!!')
+  next();
+});
+// Test route for the API
 router.get('/', function(req, res) {
   res.json({ message: "hooray! Welcome to Ian's API!" });
 });
+
+// router.post('/blogs', function(req, res) {
+//   var blog = new Blog();
+//     blog.title = req.body.title;
+//     blog.author = req.body.author;
+//     blog.body = req.body.body;
+//     blog.comments = req.body.comments;
+//     blog.date = req.body.date;
+    
+//     // save the blog instance and check for errors
+//     blog.save(function(err) {
+//       if(err)
+//         res.send(err);
+//       res.json({ message: 'Blog created!' });
+//     });
+//   console.log("hello postman!");
+// });
+
+// route for creating blog (app.post)
+router.route('/blogs')
+  .post(function(req, res, next) {
+    // var blog = new Blog();
+    // blog.title = req.body.title;
+    // blog.author = req.body.author;
+    // blog.body = req.body.body;
+    // blog.comments = req.body.comments;
+    // blog.date = req.body.date;
+    
+    // // save the blog instance and check for errors
+    // blog.save(function(err) {
+    //   if(err)
+    //     res.send(err);
+    //   res.json({ message: 'Blog created!' });
+    // });
+    console.log("hello postman!");
+    // next();
+  });
   // handle api calls
   // authentication routes
 
@@ -25,25 +69,7 @@ router.get('/', function(req, res) {
 //     });
 //   });
 
-//   // route for creating blog (app.post)
-//   app.post('/api/blogs', function(req, res) {
-//     Blog.create({
-//       title: req.body.title,
-//       author: req.body.author,
-//       body: req.body.body,
-//       coments: req.body.comments,
-//       date: req.body.date
-//     }, function(err, blog) {
-//       if(err)
-//         res.send(error);
-//       // not sure if this works, but trying to display blog just created
-//       Blog.find(function(err, blog) {
-//         if(err)
-//           res.send(err);
-//         res.json(blog);
-//       })
-//     });
-//   });
+
 
 //   // route for updating a blog
 

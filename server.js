@@ -44,6 +44,8 @@ require('./routes'); // configure our routes
 // startup our app at http://localhost:8080
 app.listen(port);
 
+// Registers the routes----------------
+// all routes will be prefixed with/api
 app.use('/api', require('./routes'));
 
 // shoutout to the user
