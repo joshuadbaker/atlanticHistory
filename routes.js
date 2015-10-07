@@ -16,22 +16,22 @@ router.get('/', function(req, res) {
   res.json({ message: "hooray! Welcome to Ian's API!" });
 });
 
-// router.post('/blogs', function(req, res) {
-//   var blog = new Blog();
-//     blog.title = req.body.title;
-//     blog.author = req.body.author;
-//     blog.body = req.body.body;
-//     blog.comments = req.body.comments;
-//     blog.date = req.body.date;
+router.post('/blogs', function(req, res) {
+  var blog = new Blog();
+    blog.title = req.body.title;
+    blog.author = req.body.author;
+    blog.body = req.body.body;
+    blog.comments = req.body.comments;
+    blog.date = req.body.date;
     
-//     // save the blog instance and check for errors
-//     blog.save(function(err) {
-//       if(err)
-//         res.send(err);
-//       res.json({ message: 'Blog created!' });
-//     });
-//   console.log("hello postman!");
-// });
+    // save the blog instance and check for errors
+    blog.save(function(err) {
+      if(err)
+        res.send(err);
+      res.json({ message: 'Blog created!' });
+    });
+  console.log("hello postman!");
+});
 
 // route for creating blog (app.post)
 router.route('/blogs')
