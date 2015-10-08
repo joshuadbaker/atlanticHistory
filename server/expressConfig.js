@@ -3,7 +3,7 @@ var bodyParser = require('body-parser'),
 
 module.exports = function(app, express) {
   // set the static files location /public/img will be /img for users
-  app.use(express.static(__dirname + '/public'));
+  app.use(express.static(__dirname + '/../public'));
 
   // Set the view directory, this enables us to use the .render method inside routes
   app.set('views', __dirname + '/../public/views');
@@ -19,4 +19,9 @@ module.exports = function(app, express) {
 
   // overrride with the X-HTTP-Method-Override header in the request.  Simulate DELETE/PUT
   app.use(methodOverride('X-HTTP-Method-Override'));
+
+  // Registers the routes----------------
+
+  // all routes will be prefixed with/api
+  app.use('/api', require('../server/routes/index'));
 };
