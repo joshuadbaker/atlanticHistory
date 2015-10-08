@@ -3,7 +3,7 @@
 // var app            = express();
 // var bodyParser     = require('body-parser');
 
-var app      = require('./routes'), // configure our routes
+var app      = require('./server/routes'), // configure our routes
     port     = process.env.PORT || 8080,
     mongoose = require('mongoose'), 
     db       = require('./config/db');
@@ -16,4 +16,4 @@ var server = app.listen(port, function() {
 
 // Registers the routes----------------
 // all routes will be prefixed with/api
-app.use('/api', require('./routes/index'));
+app.use('/api', require('./server/routes/index'));
