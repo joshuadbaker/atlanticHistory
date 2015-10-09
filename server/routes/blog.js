@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
+var express = require('express'),
+    router = express.Router(),
 // grab the blogblog. model we just created
-var Blog = require('../models/blog');
+    Blog = require('../models/blog');
 
 // server routes --------------------------------
 
