@@ -1,2 +1,1 @@
-// app.js
-angular.module('atlanticHistory', ['ui.bootstrap', 'ngRoute', 'appRoutes', 'MainCtrl', 'BlogCtrl', 'BlogService']);
+angular.module('AtlanticHistory', ['ngRoute', 'ngResource', 'ui.bootstrap']);

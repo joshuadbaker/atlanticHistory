@@ -7,7 +7,7 @@ require('./expressConfig')(app, express);
 
 
 app.get('*', function(req, res) {
-  res.sendfile('public/index.html');
+  res.sendfile('public/views/index.html');
 });
 
 module.exports = app;
