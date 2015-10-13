@@ -1,12 +1,12 @@
-<h1>Blog Posts</h1>
+<h1>Blog Posts Homez <a class="btn btn-default" href="/blogs/new">New Blog</a></h1>
 <div class="jumbotron text-center">
-  <h1>Blog Posts</h1>
-
-  <p>{{ tagline }}</p>
+  <h1>{{ tagline }}</h1>
 </div>
 <div class="row">
-  <div ng-repeat="blog in blogs" class="col-sm-9"></div>
-  <h3><a title="{{blog.title}}"></h3>
-  <h4>{{blog.author}}</h4>
-  <li>{{blog.date}}</li>
+  <h1>Display Blogs</h1>
+  <div ng-repeat="blog in blogs" class="col-sm-6">
+    <h3><a title="{{blog.title}}" ng-href="/blogs/{{blog._id}}">{{blog.title}}</a></h3>
+    <h4>{{blog.author}}</h4>
+    <li>{{blog.date}}</li>
+  </div>
 </div>

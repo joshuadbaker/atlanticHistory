@@ -39,7 +39,7 @@ router.route('/blogs')
     });
   });
 
-// route for /bears/:blog_id
+// route for /blogs/:blog_id
 router.route('/blogs/:blog_id')
   .get(function(req, res) {
     Blog.findById(req.params.blog_id, function(err, blog) {
