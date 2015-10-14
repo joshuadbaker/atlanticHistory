@@ -13,11 +13,11 @@ angular.module('AtlanticHistory').config(function($routeProvider, $locationProvi
     controller: "BlogCreateController"
   })
   .when('/blogs/:id', {
-    templateUrl: "templates/notes/show.html",
+    templateUrl: "templates/blogs/show.html",
     controller: "BlogShowController"
   })
   .when('/blogs/:id/edit', {
-    templateUrl: "templates/notes/edit.html",
+    templateUrl: "templates/blogs/edit.html",
     controller: "BlogEditController"
   });
 

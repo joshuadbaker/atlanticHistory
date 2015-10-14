@@ -1,1 +1,17 @@
-edit.html
+<h1>Edit: {{blog.title}}</h1>
+<form>
+  <fieldset class="form-group">
+    <label for="title">Title</label>
+    <input class="form-control" type="text" id="title" name="title" ng-model="blog.title">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="author">Author</label>
+    <input class="form-control" type="text" id="body" name="author" ng-model="blog.author">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="body">Body</label>
+    <input class="form-control" type="text" id="body" name="body" ng-model="blog.body">
+  </fieldset>
+  <input type="submit" value="{{isSubmitting ? 'saving...' : 'Save'}}" class="btn btn-default" ng-click="saveBlog(blog)"
+  ng-disabled="isSubmitting">
+</form>

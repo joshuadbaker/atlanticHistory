@@ -1,8 +1,8 @@
 angular.module('AtlanticHistory').factory('Blog', function($resource) {
-  return $resource('/api/blogs/:id', {id: '@id'}, {
+  return $resource('/api/blogs/:id', {id: '@_id'}, {
     update: {
       method: "PUT",
-    }
+    },
   });
 });
 

@@ -61,9 +61,10 @@ router.route('/blogs/:blog_id')
       blog.save(function(err) {
         if(err)
           res.send(err);
-        res.json({ message: 'Blog updated!'});
+        res.json({ message: 'Blog updated!'}, blog);
       });
     });
+    console.log("update on fleek!")
   })
   .delete(function(req, res) {
     Blog.remove({
@@ -71,8 +72,9 @@ router.route('/blogs/:blog_id')
     }, function(err, blog) {
       if(err)
         res.send(err);
-      res.json({ message: 'Successfully deleted'});
+      res.json({message: "deleted"});
     });
+    console.log("Deleted G!");
   });
 
 module.exports = router;

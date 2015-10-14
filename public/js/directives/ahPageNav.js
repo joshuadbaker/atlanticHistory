@@ -4,7 +4,7 @@ angular.module('AtlanticHistory').directive('ahPageNav', function() {
     restrict: 'E',
     templateUrl: 'templates/directives/ahPageNav.html',
     controller: function($scope) {
-      $scope.tagline = ("Hey mutherfucker!");
+      $scope.tagline = ("Hey scooter!");
     }
   }
 });
