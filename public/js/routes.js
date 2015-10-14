@@ -23,6 +23,14 @@ angular.module('AtlanticHistory').config(function($routeProvider, $locationProvi
   .when('/about', {
     templateUrl: "templates/about/about.html",
     controller: "AboutController"
+  })
+  .when('/ian_aebel', {
+    templateUrl: "templates/ian_aebel/ian_aebel.html",
+    controller: "IanController"
+  })
+  .when('/publications', {
+    templateUrl: "templates/publications/publications.html",
+    controller: "PublicationsController"
   });
 
   $locationProvider.html5Mode(true);

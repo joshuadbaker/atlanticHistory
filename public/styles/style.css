@@ -1,0 +1,12 @@
+/*@import url(https://fonts.googleapis.com/css?family=EB+Garamond);*/
+@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/*h1, .nav, .navbar-brand, .navbar-nav {
+  font-family: 'EB Garamond', sans-serif;
+}*/
+h1, .nav, .navbar-brand, .navbar-nav {
+  font-family: 'Julius Sans One', sans-serif;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+}
