@@ -19,6 +19,10 @@ angular.module('AtlanticHistory').config(function($routeProvider, $locationProvi
   .when('/blogs/:id/edit', {
     templateUrl: "templates/blogs/edit.html",
     controller: "BlogEditController"
+  })
+  .when('/about', {
+    templateUrl: "templates/about/about.html",
+    controller: "AboutController"
   });
 
   $locationProvider.html5Mode(true);
