@@ -1,12 +1,29 @@
-/*@import url(https://fonts.googleapis.com/css?family=EB+Garamond);*/
-@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+/*@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-/*h1, .nav, .navbar-brand, .navbar-nav {
+h1, h3, h4, h5, .nav, .navbar-brand, .navbar-nav {
   font-family: 'EB Garamond', sans-serif;
-}*/
-h1, .nav, .navbar-brand, .navbar-nav {
-  font-family: 'Julius Sans One', sans-serif;
 }
+/*h1, .nav, .navbar-brand, .navbar-nav {
+  font-family: 'Julius Sans One', sans-serif;
+}*/
 p {
   font-family: 'Open Sans', sans-serif;
+}
+.nav, .pagination, .carousel, .panel-title a {
+ cursor: pointer; 
+}
+.navbar {
+  opacity: 0.85;
+}
+.background-photo {
+  background-image: url(/images/atlantic-history.jpg);
+  background-size: cover;
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  background-color: #f7f7f7;
+  background-blend-mode: multiply;
 }
