@@ -9,54 +9,51 @@
   <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="styles/style.css"> <!-- custom styles -->
 </head>
-<body>
-  <div class="background-photo">
-  <div class="container">
+<body class="background-photo">
+  <div >
+  </div><!-- background-photo -->
     <!-- Header -->
-    
-      <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <ah-navbar>
-            <div class="navbar-header">
-                    <button id="btn-menu-toggle" type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                    </button>
-              <a class="navbar-brand" href="/">Atlantic History</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div id="navbar" class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
-              <ul class="nav navbar-nav navbar-right">
-                <li>
-                  <a href="/ian_aebel">Ian Aebel</a>
-                </li>
-                <li>
-                  <a href="/about">About</a>
-                </li>
-                <li>
-                  <a href="/publications">Publications</a>
-                </li>
-                <li>
-                <a href="/blogs">Blog Posts</a>
-              </li>
-              </ul>
-            </div>
-          </ah-navbar>  
-        </div><!-- container fluid -->   
-      </nav>
-      <ah-page-nav></ah-page-nav>
-      <!-- Angular Dynamic Content -->      
-    </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button id="btn-menu-toggle" type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Atlantic History</a>
+          <ah-page-nav></ah-page-nav>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="navbar" class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="/ian_aebel">Ian Aebel</a>
+            </li>
+            <li>
+              <a href="/about">About</a>
+            </li>
+            <li>
+              <a href="/publications">Publications</a>
+            </li>
+            <li>
+            <a href="/blogs">Blog Posts</a>
+          </li>
+          </ul>
+        </div>  
+      </div><!-- container fluid -->
+      <ah-navbar></ah-navbar>
+    </nav>     
+  <div class="content">
     <div ng-view class="container-fluid"></div>
-  </div>
-  <footer class="footer">
+  </div> 
+  <footer>
     <div class="container">
-      <div>
-        <span class="text-center"><a class="fa twitter-square" href="#"></a></span>
-      </div>
+      <!-- <div>
+        <i class="glyphicon glyphicon-camera"></i>
+      </div> -->
     </div>
   </footer><!-- /footer -->
 </body>

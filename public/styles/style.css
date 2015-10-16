@@ -1,38 +1,66 @@
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
 /*@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-h1, h3, h4, h5, .nav, .navbar-brand, .navbar-nav {
+/******** index page *********/
+h1, h2, h3, h4, .nav, .navbar-brand, .navbar-nav {
   font-family: 'EB Garamond', sans-serif;
+  color: #460708;
 }
 /*h1, .nav, .navbar-brand, .navbar-nav {
   font-family: 'Julius Sans One', sans-serif;
 }*/
-p {
+h5, p {
   font-family: 'Open Sans', sans-serif;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.background-photo {
+  background-image: url(/images/sea-ocean-rocks-waves.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #EDEAD7;
+  background-blend-mode: multiply;
+}
+nav {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  background-color: #454545;
+  opacity: 0.85;
+}
+.content {
+  width: 80%;
+  margin: 0 auto;
+  padding: 60px 0;
 }
 .nav, .pagination, .carousel, .panel-title a {
  cursor: pointer; 
 }
-.navbar {
-  opacity: 0.85;
-}
-.background-photo {
-  background-image: url(/images/sea-ocean-rocks-waves.jpg);
-  background-size: cover;
-  position:fixed;
-  width:100%;
-  height:100%;
-  top:0px;
-  left:0px;
-  background-color: #f7f7f7;
-  background-blend-mode: multiply;
-}
-.footer {
-  position: absolute;
+footer {
+  position: fixed;
   bottom: 0;
   width: 100%;
   height: 60px;
   background-color: #454545;
   opacity: 65%;
   color: #E1EFE8;
+}
+
+/******** blog show page *********/
+#blogs {
+  float: right;
+}
+#blog-post {
+  margin-left: auto;
+  margin-right: auto;
 }
