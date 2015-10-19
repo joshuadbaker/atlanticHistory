@@ -12,26 +12,6 @@ var BlogSchema = new Schema({
   hidden: Boolean
 });
 
-// module.exports = {
-//   get: function() {
-//     var blogs = [];
-//   },
-//   all: function() {
-//     return notesArray;
-//   },
-//   update: function() {
-
-//   },
-//   delete: function() {
-
-//   },
-//   create: function() {
-
-//   }
-//  };
-// module.exports = mongoose.model('Blog', BlogSchema);
-// define out blog model
-// module.exports allows us to pass this to other files when it is called
 module.exports = mongoose.model('Blog', {
   title: { type: String, default: 'Title' },
   author: { type: String, default: 'Ian Aebel'}, 

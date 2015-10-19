@@ -38,6 +38,10 @@ nav {
   background-color: #454545;
   opacity: 0.85;
 }
+nav a:hover {
+  color: #FBEE86;
+  /*opacity: .9;*/
+}
 .content {
   width: 80%;
   margin: 0 auto;
