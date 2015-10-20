@@ -1,7 +1,8 @@
 var express = require('express'),
     router = express.Router(),
-// grab the blogblog. model we just created
-    Blog = require('../models/blog');
+// grab the blog model we just created
+    Blog = require('../models/blog'),
+    Comment = require('../models/comment.js');
 
 // server routes --------------------------------
 
@@ -21,7 +22,7 @@ router.route('/blogs')
     blog.body = req.body.body;
     blog.comments = req.body.comments;
     blog.date = req.body.date;
-    
+    blog.comments.push({title: 'BEST BLOG EVARRRRH!!!'});
     // save the blog instance and check for errors
     blog.save(function(err) {
       if(err)
@@ -43,6 +44,7 @@ router.route('/blogs')
 router.route('/blogs/:blog_id')
   .get(function(req, res) {
     Blog.findById(req.params.blog_id, function(err, blog) {
+      // blog.comments.push({title: 'BEST BLOG EVARRRRH!!!'});
       if(err)
         res.send(err);
       res.json(blog);
