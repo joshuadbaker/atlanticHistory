@@ -22,7 +22,7 @@ router.route('/blogs')
     blog.body = req.body.body;
     blog.comments = req.body.comments;
     blog.date = req.body.date;
-    blog.comments.push({title: 'BEST BLOG EVARRRRH!!!'});
+    // blog.comments.push({title: 'BEST BLOG EVARRRRH!!!'});
     // save the blog instance and check for errors
     blog.save(function(err) {
       if(err)

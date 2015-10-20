@@ -1,16 +1,16 @@
-<h1 class="text-center">Blog Posts</h1>
-<div id="blogs" class="col-sm-3">
-  <div class="row">
+<h1 class="text-center">Blog</h1>
+  <div class="row text-center">
     <a href="/blogs/new">New Blog</a>
-    <!-- <div class="col-sm-6">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div> -->
   </div>
+<div class="col-sm-6">
+  <div ng-repeat="blog in blogs track by $index">
+    <h2 ng-show="$last">{{blog.title}}</h2>
+    <h5 ng-show="$last">By {{blog.author}}</h5>
+    <h5 ng-show="$last">{{blog.date | date:"longDate" }}</h5>
+    <p ng-show="$last">{{blog.body}}</p>
+  </div>
+</div>
+<div id="blogs" class="col-sm-3">
   <div class="row">
     <h2>Recent Posts</h1>
     <div ng-repeat="blog in blogs">
@@ -20,3 +20,9 @@
     </div>
   </div>
 </div>
+<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->

@@ -12,6 +12,9 @@ h1, h2, h3, h4, .nav, .navbar-brand, .navbar-nav {
 h5, p {
   font-family: 'Open Sans', sans-serif;
 }
+p {
+  color: #2E2E2A;
+}
 html, body {
   height: 100%;
   width: 100%;
