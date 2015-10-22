@@ -2,7 +2,7 @@ var express = require('express'),
     router = express.Router(),
 // grab the blog model we just created
     Blog = require('../models/blog'),
-    Comment = require('../models/comment.js');
+    Tag = require('../models/tag');
 
 // server routes --------------------------------
 
@@ -12,7 +12,6 @@ router.use(function(req, res, next) {
   next();
 });
 
-
 // routes for '/blogs'
 router.route('/blogs')
   .post(function(req, res, next) {
@@ -20,9 +19,9 @@ router.route('/blogs')
     blog.title = req.body.title;
     blog.author = req.body.author;
     blog.body = req.body.body;
-    blog.comments = req.body.comments;
+    blog.tags = req.body.tags;
     blog.date = req.body.date;
-    // blog.comments.push({title: 'BEST BLOG EVARRRRH!!!'});
+    // blog.tags.push(tag);
     // save the blog instance and check for errors
     blog.save(function(err) {
       if(err)
@@ -36,15 +35,45 @@ router.route('/blogs')
       if(err)
         res.send(err);
       res.json(blogs);
-      console.log('getting blogs!')
+      console.log('getting blogs!');
     });
+  });
+
+// route for /blogs/tags
+router.route('/blogs/tags')
+  .post(function(req, res, next) {
+    var tag = new Tag();
+    tag.name = req.body.name;
+    tag.save(function(err) {
+      if(err)
+        res.send(err);
+      res.json({ message: 'Tag created!' });
+      console.log('Tag spawned!');
+    });
+  })
+  .get(function(req, res) {
+    Tag.find(function(err, tags) {
+      if(err)
+        res.send(err);
+      res.json(tags);
+      console.log('getting tags!');
+    });
+  })
+  .delete(function(req, res) {
+    Tag.remove({
+      _id: req.params.tag_id
+    }, function(err, blog) {
+      if(err)
+        res.send(err);
+      res.json({message: "tag deleted"})
+    });
+    console.log("Tag deleted bruh!");
   });
 
 // route for /blogs/:blog_id
 router.route('/blogs/:blog_id')
   .get(function(req, res) {
     Blog.findById(req.params.blog_id, function(err, blog) {
-      // blog.comments.push({title: 'BEST BLOG EVARRRRH!!!'});
       if(err)
         res.send(err);
       res.json(blog);

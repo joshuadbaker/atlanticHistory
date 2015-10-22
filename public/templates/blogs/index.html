@@ -6,7 +6,8 @@
   <div ng-repeat="blog in blogs track by $index">
     <h2 ng-show="$last">{{blog.title}}</h2>
     <h5 ng-show="$last">By {{blog.author}}</h5>
-    <h5 ng-show="$last">{{blog.date | date:"longDate" }}</h5>
+    <h5 ng-show="$last">{{blog.date | date:"longDate"}}</h5>
+    <h5 ng-show="$last">{{blog.tags}}</h5>
     <p ng-show="$last">{{blog.body}}</p>
   </div>
 </div>

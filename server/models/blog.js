@@ -2,12 +2,12 @@
 // grab the mongoose module
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
-    // comments = require('./comment.js')
+    Tag = require('./tag.js')
     BlogSchema = new Schema({
       title: { type: String, default: 'Title' },
       author: { type: String, default: 'Ian Aebel'}, 
       body: { type: String, default: 'Title'},
-      // comments: [comments],
+      tags: [Tag],
       date: { type: Date, default: Date.now },
       hidden: Boolean
     });
@@ -36,7 +36,7 @@ module.exports = mongoose.model('Blog', {
   title: { type: String, default: 'Title' },
   author: { type: String, default: 'Ian Aebel'}, 
   body: { type: String, default: 'Title'},
-  // comments: [comments],
+  tags: [Tag],
   date: { type: Date, default: Date.now },
   hidden: Boolean
 });

@@ -3,6 +3,7 @@
     <h3>{{blog.title}}</h3>
     <h5>By: {{blog.author}}</h5>
     <h5>{{ blog.date | date:"longDate" }}</h5>
+    <h5>{{blog.tags}}</h5>
   </div>
   <p>{{blog.body}}</p>
   <a ng-href="/blogs/{{blog._id}}/edit" class="btn btn-default">Edit Post</a>
